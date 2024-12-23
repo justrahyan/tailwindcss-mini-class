@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  @apply p-4 rounded-sm shadow shadow-gray-200 hover:shadow-md dark:shadow-none cursor-pointer dark:bg-darkSecondary 
+    transform transition-transform duration-300 ease-in-out;
+}
+
+.card:hover {
+  @apply -translate-y-2;
+}
+
+.review-card {
+  @apply p-8 rounded-sm shadow-md dark:bg-darkSecondary;
+}
+
+.menu-text {
+  @apply text-white font-medium hover:underline;
+}
+
+.menu-text-mobile {
+  @apply text-gray-800 font-medium px-6 py-1 block;
+}
+
+.custom-font {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.animate-in {
+  animation: animate-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry 10%;
+}
+
+@keyframes animate-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
